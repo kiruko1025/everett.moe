@@ -1,20 +1,21 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
+title:            Everett
+longtitle:        Everett
+author:           Everett
 email:            sighingnow@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
 
-version:          1.0
-gitbook_version:  3.2.3
 
-url:              'https://kiruko1025.github.io/'
+
+url:              'https://kiruko.github.io'
 baseurl:          '/everett.moe'
 rss:              RSS
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
 # bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
+theme: just-the-docs
 
 toc:
   enabled: true
@@ -52,10 +53,8 @@ exclude:
 collections:
   pages:
     output: true
-    permalink: /:collection/:path/
   others:
     output: true
-    permalink: /:collection/:path/
 
 ordered_collections:
   - posts
