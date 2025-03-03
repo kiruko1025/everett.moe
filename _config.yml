@@ -74,6 +74,7 @@ plugins:
   - jekyll-github-metadata
   - jekyll-include-cache
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Enable or disable the site search
 # Supports true (default) or false
