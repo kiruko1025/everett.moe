@@ -8,12 +8,10 @@ has_toc: false
 
 ## Textbooks
 
-## Fiction
-
-## Non-Fiction
+[Introduction to the Theory of Computation](https://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X)  by Michael Sipser
 
 ## Articles and Papers
 
-## RSS Feeds
+[Paul Graham's Essays](http://www.paulgraham.com/articles.html)
 
-## Poems
+

@@ -4,9 +4,9 @@ parent: About
 nav_order: 6
 has_toc: false
 ---
-# Skills
+# Some Skills I Have
 
-## Programming languages
+## Programming languages I can use
 - Python
 - Java
 - C++
@@ -16,8 +16,9 @@ has_toc: false
 - HTML/CSS
 - R
 - Ruby
+- rust
 
-## Languages I speak
+## Languages I speak fluently
 - English
 - Chinese (Mandarin)
 - Japanese
