@@ -6,3 +6,5 @@ has_toc: false
 ---
 # Quotes
 - "There are no facts, only interpretations." - Friedrich Nietzsche
+
+- "Talk is cheap. Show me the code." - Linus Torvalds

@@ -4,7 +4,7 @@ parent: Hobbies
 nav_order: 1
 has_toc: false
 ---
-# Some Games I LIke
+# Some Games I Like
 
 ## Video games
 - [Planescape: Torment](https://en.wikipedia.org/wiki/Planescape:_Torment)
