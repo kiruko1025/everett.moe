@@ -1,0 +1,92 @@
+name: Build and deploy Hugo
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    env:
+      HUGO_VERSION: 0.166.0
+      TZ: America/New_York
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install Hugo extended
+        run: |
+          mkdir -p "${RUNNER_TEMP}/hugo-bin"
+          cd "${RUNNER_TEMP}/hugo-bin"
+          release_url="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+          archive="hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
+          curl --fail --location --retry 3 --output "$archive" "${release_url}/${archive}"
+          curl --fail --location --retry 3 --output checksums.txt "${release_url}/hugo_${HUGO_VERSION}_checksums.txt"
+          sha256sum --check --ignore-missing checksums.txt
+          tar -xzf "$archive" hugo
+          echo "${RUNNER_TEMP}/hugo-bin" >> "$GITHUB_PATH"
+          ./hugo version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Build for GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        env:
+          SITE_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: npm run build -- --baseURL "${SITE_BASE_URL}/"
+
+      - name: Validate build
+        if: github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
+        run: npm run build
+
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./public
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,2 @@
+{{- /* Keep contact links usable without JavaScript and in search summaries. */ -}}
+<a class="link link--text" href="{{ .emailAddress }}">{{ .emailTitle | default (strings.TrimPrefix "mailto:" .emailAddress) | safeHTML }}</a>

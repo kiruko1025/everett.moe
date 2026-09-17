@@ -1,5 +1,8 @@
-_site/
-_draft/
-.jekyll-cache/
-.bundle/
-vendor/bundle/
+node_modules/
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+.cache/
+.env
+.DS_Store

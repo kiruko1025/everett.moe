@@ -1,0 +1,30 @@
+title = "Everett"
+baseURL = "https://kiruko1025.github.io/everett.moe/"
+locale = "en-US"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term", "RSS"]
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+enableGitInfo = false
+summaryLength = 20
+
+[build.buildStats]
+  enable = true
+
+[outputs]
+  home = ["HTML", "searchIndex"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[outputFormats.searchIndex]
+  mediaType = "application/json"
+  baseName = "search-index"
+  isPlainText = true
+  notAlternative = true
+
+[minify.tdewolff.html]
+  keepComments = true
+
+[caches.getresource]
+  dir = ":cacheDir/:project"
+  maxAge = -1

@@ -1,0 +1,63 @@
+title = "Everett"
+description = "It's me"
+mainSections = ["docs"]
+math = false
+
+[doks]
+  colorMode = "auto"
+  colorModeToggler = true
+  navbarSticky = true
+  containerBreakpoint = "fluid"
+  navBarButton = false
+  flexSearch = true
+  searchExclKinds = ["section"]
+  searchExclTypes = []
+  showSearch = []
+  indexSummary = false
+  showDate = false
+  showSummary = true
+  searchLimit = 10
+  alert = false
+  bootstrapJavascript = false
+  sectionSwitcher = false
+  sectionNav = ["docs"]
+  toTopButton = true
+  breadcrumbTrail = false
+  headlineHash = true
+  scrollSpy = false
+  multilingualMode = false
+  docsVersioning = false
+  headerBar = false
+  backgroundDots = false
+  aiButtons = false
+  sectionFooter = false
+  relatedPosts = false
+  imageList = false
+  imageSingle = false
+  editPage = false
+  lastMod = false
+
+[inline_svg]
+  iconSetDir = "tabler-icons"
+  iconSetVariant = "outline"
+
+[seo.title]
+  separator = "|"
+  suffix = "Everett"
+
+[seo.description]
+  summaryFallback = true
+  siteParamsFallback = true
+
+[seo.description.length]
+  # Keep the original short personal copy without padding it for SEO.
+  errorLevel = "ignore"
+
+[seo.schemas]
+  type = "Person"
+  name = "Everett"
+  sameAs = ["https://github.com/kiruko1025"]
+
+[render_hooks.link]
+  errorLevel = "error"
+  highlightBroken = false

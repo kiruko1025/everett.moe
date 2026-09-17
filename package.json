@@ -1,0 +1,28 @@
+{
+  "name": "everett-moe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Everett's personal site, built with Hugo and Doks.",
+  "type": "module",
+  "scripts": {
+    "dev": "hugo server --disableFastRender --noHTTPCache",
+    "start": "npm run dev",
+    "build": "hugo --minify --gc --cleanDestinationDir",
+    "create": "hugo new content"
+  },
+  "dependencies": {
+    "@tabler/icons": "^3.36.1",
+    "@thulite/doks-core": "^1.9.3",
+    "@thulite/images": "^3.3.4",
+    "@thulite/inline-svg": "^1.2.2",
+    "@thulite/seo": "^2.4.3",
+    "thulite": "^2.6.5"
+  },
+  "overrides": {
+    "minimatch": "^10.2.2",
+    "glob": "^13.0.6"
+  },
+  "engines": {
+    "node": ">=24.13.0"
+  }
+}
