@@ -7,14 +7,8 @@ has_toc: false
 ---
 # Homepage of Everett
 
-This is homepage of Everett.
+I do Theoretical Computer Science.
 
-I am currently studying at University of Miami. 
+I am on [GitHub](https://github.com/kiruko1025) 
 
-I triple major in Computer Science and Mathematics.
-
-I am on [GitHub](https://github.com/kiruko1025) and [LinkedIn](https://www.linkedin.com/in/everett-xu-5934a1292/).
-
-Checkout my [blog](everett.cool) for things I have written.
-
-You can also see my [personal page](/docs/Hobbies/index.md) to know more about me besides academics.
+Checkout my [blog](blog.everett.moe) for things I have written.

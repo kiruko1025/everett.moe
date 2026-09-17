@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem 'erb'
 
 
 gem 'jekyll-feed'
@@ -14,7 +15,6 @@ gem 'jekyll-sitemap'
 gem 'jekyll-seo-tag'
 gem 'jekyll-include-cache'
 gem 'jekyll-redirect-from'
-
 
 
 

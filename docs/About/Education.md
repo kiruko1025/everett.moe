@@ -6,4 +6,4 @@ has_toc: false
 ---
 # Education
 
-## [Univerisity of Miami](https://welcome.miami.edu/) (2023-2025): Undergraduate in CS and Math
+## [Univerisity of Michigan Ann Arbor](https://umich.edu/) (2027) B.S. in Computer Science

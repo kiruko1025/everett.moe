@@ -27,6 +27,7 @@ GEM
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
+    erb (6.0.7)
     eventmachine (1.2.7)
     faraday (2.12.2)
       faraday-net_http (>= 2.0, < 3.5)
@@ -198,6 +199,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  erb
   jekyll-feed
   jekyll-github-metadata
   jekyll-include-cache
