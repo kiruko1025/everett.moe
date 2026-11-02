@@ -1,8 +1,0 @@
-[en]
-  label = "English"
-  contentDir = "content"
-  weight = 1
-  [en.params]
-    languageISO = "EN"
-    languageTag = "en-US"
-    footer = "Made by Everett."

@@ -1,22 +1,38 @@
 # everett.moe
 
-built with [Hugo](https://gohugo.io/) and the [Doks theme](https://getdoks.org/).
+Everett’s personal website, using the new ivory-and-purple sidebar design. Each section is a separate page. The site is plain HTML, CSS, and JavaScript with self-hosted fonts and no package dependencies.
 
-Install Node.js 24 (24.13.0 or newer), npm, and [Hugo extended 0.166.0](https://github.com/gohugoio/hugo/releases/tag/v0.166.0). Then run:
+## Run locally
+
+Use Node.js 22 or later:
 
 ```sh
-npm ci
 npm run dev
 ```
 
-Open the local URL printed by Hugo. To generate the production site in `public/`:
+Open `http://127.0.0.1:4173`. To prepare the deployable site in `public/`:
 
 ```sh
 npm run build
 ```
 
-Edit the written content in `content/`. Site settings and navigation are in `config/_default/`. 
+## Edit the site
 
-GitHub Actions validates pull requests and builds and deploys pushes to `main` to GitHub Pages. It uses the site's configured Pages URL when building. The workflow can also be run manually from the Actions tab. The repository's **Settings → Pages → Source** must be set to **GitHub Actions**; see [Hugo's Pages deployment guide](https://gohugo.io/host-and-deploy/host-on-github-pages/).
+- `site/index.html`: About
+- `site/education/index.html`: Education
+- `site/elsewhere/index.html`: Blog and GitHub links
+- `site/contact/index.html`: Contact
+- `site/styles.css`: Shared appearance
+- `site/script.js`: Mobile sidebar and copy-email behavior
 
-Generated files in `public/`, Hugo's resource cache, and `node_modules/` are excluded from Git.
+Every page has the same sidebar. Keep its links consistent when editing navigation. The previous Hugo source remains in Git history; links to its Education and Contact pages redirect to their new locations.
+
+## Publish
+
+GitHub Actions builds and deploys changes to `main` to the existing GitHub Pages site at `https://everett.moe`. `site/CNAME` preserves the custom domain.
+
+## Blog
+
+The `blog/` folder is a separate checkout of `https://github.com/kiruko1025/blog.everett.moe`, configured for `https://blog.everett.moe`. It has its own Git history and publishing setup; its README describes adding and editing posts. The folder is ignored by this repository so the two sites deploy independently.
+
+The `sites/` folder holds the earlier Sites preview checkout and is also ignored. The main website’s maintained source is now `site/`.
