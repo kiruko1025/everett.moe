@@ -1,6 +1,6 @@
 # everett.moe
 
-Everett’s personal website, using the new ivory-and-purple sidebar design. Each section is a separate page. The site is plain HTML, CSS, and JavaScript with self-hosted fonts and no package dependencies.
+Everett’s personal website, using the Catppuccin Macchiato sidebar design. Each section is a separate page. The site is plain HTML, CSS, and JavaScript with self-hosted fonts and no package dependencies.
 
 ## Run locally
 
