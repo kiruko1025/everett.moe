@@ -6,6 +6,5 @@ hugo_stats.json
 .cache/
 .env
 .DS_Store
-# Separate site repositories and local previews
+# Local Sites preview checkout
 /sites/
-/blog/
