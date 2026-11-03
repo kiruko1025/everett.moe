@@ -34,5 +34,3 @@ GitHub Actions builds and deploys changes to `main` to the existing GitHub Pages
 ## Blog
 
 The blog lives alongside this repository in `../blog.everett.moe/` (`Desktop/sites/blog.everett.moe`). It is a separate checkout of `https://github.com/kiruko1025/blog.everett.moe`, configured for `https://blog.everett.moe`. It has its own Git history and publishing setup; its README describes adding and editing posts. The two sites deploy independently.
-
-The `sites/` folder holds the earlier Sites preview checkout and is also ignored. The main website’s maintained source is now `site/`.
